@@ -76,14 +76,17 @@ head(iris2) # look at the dataframe heading lines
 
 # data.table - inherits from data.frame
 # much faster and efficent than data frame as its written in C
+# install and load data,table
+# crete DF with 9 observation of rnorm and abc repeating
+install.packages("data.table")
+library(data.table)
+DF = data.frame(x=rnorm(9), y=rep(c("a","b","c"),each=3),z=rnorm(9)) #dataframe
+head(DF,n=3)
 
+DT = data.table(x=rnorm(9), y=rep(c("a","b","c"),each=3),z=rnorm(9)) #datatable
+head(DF,n=3)
 
-
-
-
-
-
-
+tables() #see all the tables in memory
 
 
 
